@@ -46,13 +46,6 @@ export const noSunLight = light(-2);
 
 
 
-// export function updatePlant(plant) {
-//   if (plant.water >= 10)
-   
-// }
-
-
-
 
 
 

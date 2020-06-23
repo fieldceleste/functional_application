@@ -2,7 +2,7 @@ import $ from "jquery";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
-import {stateChanger,blueFood,greenFood,goodWater,sunLight,fern,daffodil} from './../src/plant_application.js';
+import {stateChanger,blueFood,greenFood,badFood,goodWater,badWater,sunLight,fern,daffodil} from './../src/plant_application.js';
 
 $(document).ready(function() {
 
@@ -19,9 +19,15 @@ $(document).ready(function() {
       const newState = stateChanger(sunLight);
       $('#light-value').text(newState.light);
     });
+
+// <-------------------Daffodil---------------------------------------->
     $('#water1').click(function() {
-      const newState = fern(goodWater);
-      $('#goodWater-diffodil').text(newState.water);
+      const newState = daffodil(goodWater);
+      $('#water-diffodil').text(newState.water);
+    });
+    $('#water2').click(function() {
+      const newState = daffodil(badWater);
+      $('#water-diffodil').text(newState.water);
     });
     $('#feed1').click(function() {
       const newState = daffodil(blueFood);
@@ -29,6 +35,10 @@ $(document).ready(function() {
     });
     $('#feed2').click(function() {
       const newState = daffodil(greenFood);
-      $('food-daffodil').text(newState.soil);
+      $('#food-daffodil').text(newState.soil);
+    });
+    $('#feed3').click(function() {
+      const newState = daffodil(badFood);
+      $('#food-daffodil').text(newState.soil);
     });
   });
