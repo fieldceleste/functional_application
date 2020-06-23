@@ -12,9 +12,9 @@ Build application for growing plants using closures.
 
 |   Behavior Description   |  Input Ex.   |        Output Ex.        |
 |------------------------------|--------------|--------------------------|
-| 1.Add functionality to create multiple plants
-| 2.Add functionality so different plants have different abilities.
-| 3.Build out a fully functioning game where users can feed their plants.
+| 1.Add functionality to create multiple plants √
+| 2.Add functionality so different plants have different abilities. √
+| 3.Build out a fully functioning game where users can feed their plants.√
 
 ## Known Bugs
 * None at this time.
