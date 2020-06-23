@@ -44,8 +44,7 @@ export const badFood = feed(-1);
 export const sunLight = light(3);
 export const noSunLight = light(-2);
 
-// const fedFern = stateChanger(blueFood);
-// const fedDaf = stateChanger(sunLight);
+
 
 // export function updatePlant(plant) {
 //   if (plant.water >= 10)

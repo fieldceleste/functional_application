@@ -2,7 +2,7 @@ import $ from "jquery";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
-import {stateChanger,blueFood,goodWater,sunLight,fern,daffodil} from './../src/plant_application.js';
+import {stateChanger,blueFood,greenFood,goodWater,sunLight,fern,daffodil} from './../src/plant_application.js';
 
 $(document).ready(function() {
 
@@ -25,6 +25,10 @@ $(document).ready(function() {
     });
     $('#feed1').click(function() {
       const newState = daffodil(blueFood);
-      $('#blueFood-daffodil').text(newState.soil);
+      $('#food-daffodil').text(newState.soil);
+    });
+    $('#feed2').click(function() {
+      const newState = daffodil(greenFood);
+      $('food-daffodil').text(newState.soil);
     });
   });
