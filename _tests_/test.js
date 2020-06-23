@@ -1,4 +1,4 @@
-import {feed,hydrate,light} from '../src/plant_application.js';
+import {feed,hydrate,light,stateChanger} from '../src/plant_application.js';
 // import { TestScheduler } from 'jest';
 
 describe('blueFood', () => {
@@ -25,3 +25,9 @@ describe('sunLight', () => {
     expect(newPlant.light).toEqual(3);
   });
 });
+//   describe('stateChanger', () => {
+//     test('Should change state by a specific function' , () => {
+//       const hydratePlant = stateChanger(goodWater);
+//       expect(hydratePlant.water).toBe(10);
+//   });
+// });

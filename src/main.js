@@ -2,7 +2,7 @@ import $ from "jquery";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
-import {stateChanger,blueFood,goodWater,sunLight} from './../src/plant_application.js';
+import {stateChanger,blueFood,goodWater,sunLight,fern,daffodil} from './../src/plant_application.js';
 
 $(document).ready(function() {
 

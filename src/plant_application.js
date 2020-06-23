@@ -1,5 +1,7 @@
-export const storeState = () => {
-  let currentState = {};
+const initialState = { soil: 0, water: 0, light: 0};
+
+export const storeState = (initialState) => {
+  let currentState = initialState;
   return (stateChangeFunction) => {
     const newState = stateChangeFunction(currentState);
     currentState = {...newState};
@@ -7,7 +9,9 @@ export const storeState = () => {
   };
 };
 
-export const stateChanger = storeState();
+export const stateChanger = storeState(initialState);
+const fern = storeState(initialState);
+const daffodil = storeState(initialState);
 
 // This is a function factory. We can easily create more specific functions that alter a plant's soil, water, and light to varying degrees.
 
@@ -16,9 +20,9 @@ export const stateChanger = storeState();
     return (state) => ({
       ...state,
       [prop] : (state[prop] || 0) + value
-    })
-  }
-}
+    });
+  };
+};
 
 // We create two functions using our function factory. We could easily create many more.
 
@@ -29,10 +33,18 @@ export const light = changeState("light");
 
 
 export const goodWater = hydrate(10);
-export const blueFood = feed(5);
-export const sunLight = light(3);
+export const badWater = hydrate(-5);
 
-//const fedPlant = stateChanger(blueFood);
+export const blueFood = feed(5);
+export const greenFood = feed(2);
+export const badFood = feed(-1);
+
+
+export const sunLight = light(3);
+export const noSunLight = light(-2);
+
+// const fedFern = stateChanger(blueFood);
+// const fedDaf = stateChanger(sunLight);
 
 
 
