@@ -1,4 +1,4 @@
-import {feed,hydrate} from '../src/plant_application.js';
+import {feed,hydrate,light} from '../src/plant_application.js';
 // import { TestScheduler } from 'jest';
 
 describe('blueFood', () => {
@@ -15,5 +15,13 @@ describe('goodWater', () => {
     const plant = {};
     const newPlant = hydrate(10)(plant);
     expect(newPlant.water).toEqual(10);
+  });
+});
+
+describe('sunLight', () => {
+  test('Should add 3 levels of sunLight', () => {
+    const plant = {};
+    const newPlant = light(3)(plant);
+    expect(newPlant.light).toEqual(3);
   });
 });
