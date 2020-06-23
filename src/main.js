@@ -19,4 +19,12 @@ $(document).ready(function() {
       const newState = stateChanger(sunLight);
       $('#light-value').text(newState.light);
     });
+    $('#water1').click(function() {
+      const newState = fern(goodWater);
+      $('#goodWater-diffodil').text(newState.water);
+    });
+    $('#feed1').click(function() {
+      const newState = daffodil(blueFood);
+      $('#blueFood-daffodil').text(newState.soil);
+    });
   });
