@@ -11,8 +11,8 @@ export const storeState = (initialState) => {
 
 export const stateChanger = storeState(initialState);
 
-export const fern = storeState(initialState);
-export const daffodil = storeState(initialState);
+export const fern = storeState({ soil: 0, water: 0, light: 0});
+export const daffodil = storeState({ soil: 0, water: 0, light: 0, bloom:0});
 
 // This is a function factory. We can easily create more specific functions that alter a plant's soil, water, and light to varying degrees.
 
@@ -30,7 +30,7 @@ export const daffodil = storeState(initialState);
 export const feed = changeState("soil");
 export const hydrate = changeState("water");
 export const light = changeState("light");
-
+export const bloom =changeState("bloom");
 
 
 export const goodWater = hydrate(10);
@@ -44,7 +44,8 @@ export const badFood = feed(-1);
 export const sunLight = light(3);
 export const noSunLight = light(-2);
 
-
+export const superBloom = bloom(20);
+export const badBloom = bloom(-5);
 
 
 

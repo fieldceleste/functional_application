@@ -2,7 +2,7 @@ import $ from "jquery";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
-import { blueFood, greenFood, badFood, goodWater, badWater, sunLight, noSunLight, fern, daffodil } from './../src/plant_application.js';
+import { blueFood, greenFood, badFood, goodWater, badWater, sunLight, noSunLight,superBloom,badBloom, fern, daffodil } from './../src/plant_application.js';
 
 $(document).ready(function () {
 
@@ -65,5 +65,13 @@ $(document).ready(function () {
   $('#light2').click(function () {
     const newState = daffodil(noSunLight);
     $('#light-daffodil').text(newState.light);
+  });
+  $('#bloom1').click(function () {
+    const newState = daffodil(superBloom);
+    $('#bloom-daffodil').text(newState.bloom);
+  });
+  $('#bloom2').click(function () {
+    const newState = daffodil(badBloom);
+    $('#bloom-daffodil').text(newState.bloom);
   });
 });
